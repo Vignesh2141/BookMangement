@@ -1,0 +1,33 @@
+.container{
+    position: relative;
+    top: 10px;
+    left: 50px;
+    width: 600px;
+    height: 500px;
+    border-radius: 50px;
+    
+}
+
+#table1{
+    position: relative;
+    top: 30px;
+    margin: 30px;
+    height: 400px;
+    width: 600px;
+    
+}
+#table2,#table3{
+    position: relative;
+    left: 400px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+h3{
+    position: relative;
+    text-align: center;
+}
+
+#add{
+    text-align: center;
+}

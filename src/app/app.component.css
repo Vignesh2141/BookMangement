@@ -1,0 +1,12 @@
+
+h1{
+    position: relative;
+    margin: 30px;
+    left: 400px;
+    color: brown;
+}
+footer{
+    position: relative;
+    margin-top: auto;
+    background-color: black;
+}

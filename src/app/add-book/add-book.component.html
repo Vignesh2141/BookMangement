@@ -1,0 +1,80 @@
+<div class="container" style="background-color: gray;">
+    
+ <form  [formGroup]="BookForm">   
+    <table id="table1">
+     <tr><th>  <label>Book Id:</label></th>
+    
+    
+       <td> <input type="text" name="BookId" formControlName="BookId" ></td>
+    </tr> 
+
+
+    <tr><th>  <label>Book name:</label></th>
+   
+   
+      <td> <input type="text" name="BookName" formControlName="BookName"   ></td>
+   </tr> 
+
+    <tr><th>  <label>Author:</label></th>
+   
+   
+      <td><input type="text" name="author" formControlName="author"></td> 
+   </tr> 
+   <tr><th>  <label>published date:</label></th>
+   
+   
+    <td><input type="text" name="published" formControlName="published"></td> 
+ </tr> 
+ <tr><th>  <label>No of copies available:</label></th>
+   
+   
+   <td><input type="text" name="published" formControlName="noOfCopy"></td> 
+</tr> 
+ <tr><td colspan="2" id="add"><button type="button" class="btn btn-warning" (click)="addItem()">add</button> </td></tr>
+</table> 
+</form>
+</div>
+<hr>
+<div>
+   <h3>View Book Details</h3>
+<table class="table table-dark" id="table2">
+
+   <thead>
+       <tr>
+           <th>BookId</th>
+           <th>BookName</th>
+           <th>BookAuthor</th>
+           <th>PublishedDate</th>
+           <th>NAC</th>
+           <th>Action</th>
+       </tr>
+   </thead>
+
+   <tbody>
+       <tr *ngFor="let item of bookList">
+           <td><span>{{item.BookId}}</span></td>
+           <td><span>{{item.BookName}}</span></td>
+           <td><span>{{item.author}}</span></td>
+           <td><span>{{item.published}}</span></td>
+           <td><span>{{item.noOfCopy}}</span></td>
+           
+          
+          <td> <button type="button" class="btn btn-danger" (click)="removeItem(item)">Remove</button>
+          </td></tr>
+</tbody></table></div>
+         <hr>
+
+<div id="update">
+   <h3>Updation form</h3>
+   <form [formGroup]="updateForm">
+     <table class="table table-dark" id="table3">
+       <tr><th>BookId :</th><td>
+      <input type="number" name="BookId" formControlName="bid"></td></tr> 
+      <tr><th>Updated number copies :</th><td>
+      <input type="text"   name="noOfCopy" formControlName="no"></td></tr>
+      <tr><td colspan="2">
+      <button type="button" (click)="editform()"> update</button></td></tr>
+   </table>
+   </form>
+
+</div>
